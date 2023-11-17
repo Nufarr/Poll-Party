@@ -1,0 +1,27 @@
+.landingpage{
+    background-color: #04395E !important;
+}
+
+.landingtext {
+    color: white;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 47px;
+    letter-spacing: -0.005em;
+    text-align: left;
+    margin-left: 8%;
+    margin-top: 5%;
+    padding-right: 5%;
+    width: 33vw;
+}
+
+.testoasa {
+    float: right !important;
+    display: block;
+    text-align: right !important;
+    right: 0;
+}
+
+.nush{
+    display: flex;
+}
