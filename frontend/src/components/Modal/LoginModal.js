@@ -4,10 +4,9 @@ import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 
-function LoginModal({show, handleClose}) {
+function LoginModal() {
     return(
-        <Modal show={show} onHide={handleClose} className='modal'>
-            <Modal.Header closeButton></Modal.Header>
+        <Modal backdrop={true} centered className='modal'>
         <Modal.Body className='body' centered>
             <Modal.Title className='title text-center'>Login</Modal.Title>
           <Form>
