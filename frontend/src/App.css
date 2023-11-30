@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+.bg{
+  background-image: url("./assets/images/background.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

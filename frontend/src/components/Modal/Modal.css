@@ -1,26 +1,92 @@
-.modal{
+.modal {
     background-color: #D9D9D9B8;
-    border-radius: 22px;
 }
 
-.body{
-    background-color: #04395E;
-    border-radius: 22px;
+.modal-content {
+    background-color: #04395E !important;
+    border: none;
+    border-radius: 20px !important;
     box-shadow: 1px 1px 9px 0px #434343;
 }
 
-.label{
-    color:white;
-}
-
-.title{
-    color:white;
-    font-size: 40px;
+.title {
+    color: white !important;
+    font-size: 40px !important;
     font-weight: 700;
     line-height: 48px;
     letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 14% !important;
+    margin-top: 5% !important;
 }
 
-.form{
-    margin:5%;
+.formGroup {
+    background-color: #04395E !important;
+    border-color: white !important;
+    border-width: 3px !important;
+    border-radius: 9px !important;
+}
+
+.form {
+    margin: 8% 10%;
+    color: white !important;
+    
+}
+
+.form-control {
+    padding: 4% !important;
+    background-color: #04395E !important;
+    border-color: white !important;
+    border-width: 3px !important;
+    border-radius: 9px !important;
+    color: white !important; 
+}
+
+.form-control::placeholder {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white !important;
+}
+
+.modalbutton{
+    display: flex;
+    justify-content: right;
+}
+.closebut{
+    position: fixed;
+}
+.closebut:hover{
+    cursor: pointer;
+}
+.modal-backdrop {
+    background-color: transparent;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+.loginbutton {
+    margin: 15% 0 5% 0;
+    background-color: white !important;
+    color:#04395E !important;
+    font-size: 24px !important;
+    font-weight: 650 !important;
+    line-height: 29px !important;
+    padding: 2.5% 10% !important;
+    border-radius: 5px !important;
+}
+
+.createbutton {
+    margin: 5% 0 5% 0;
+    background-color: white !important;
+    color:#04395E !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+    line-height: 29px !important;
+    padding: 2.5% 10% !important;
+    border-radius: 5px !important;
 }

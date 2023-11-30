@@ -1,34 +1,39 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import hamburgerMenu from '../icons/Hamburger_menu.svg';
 import { ReactComponent as Logo } from '../../assets/images/logo.svg';
-import Modal from 'react-bootstrap/Modal';
 import LoginModal from '../Modal/LoginModal';
+import RegisterModal from '../Modal/RegisterModal';
 
 const Navbar = () => {
-    const [show, setShow] = useState(false);
+    const [showLoginModal, setShowLoginModal] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleLoginModalClose = () => setShowLoginModal(false);
+    const handleLoginModalShow = () => setShowLoginModal(true);
 
-  return (
-    <div>
-    <div className="navBarContainer">
-      <nav className="navBar">
-        <a href="/">
-          <Logo />
-        </a>
-        <div className="navItems">
-          <a href="/#login" onClick={handleShow}>
-            Login
-          </a>
-          <a href="/#register">Register</a>
+    const [showRegModal, setShowRegModal] = useState(false);
+
+    const handleRegModalClose = () => setShowRegModal(false);
+    const handleRegModalShow = () => setShowRegModal(true);
+
+    return (
+        <div>
+            <div className="navBarContainer">
+                <nav className="navBar">
+                    <a href="/">
+                        <Logo />
+                    </a>
+                    <div className="navItems">
+                        <a href="/#login" onClick={handleLoginModalShow}>
+                            Login
+                        </a>
+                        <a href="/#register" onClick={handleRegModalShow}>Register</a>
+                    </div>
+                </nav>
+            </div>
+            <LoginModal show={showLoginModal} onHide={handleLoginModalClose} />
+            <RegisterModal show={showRegModal} onHide={handleRegModalClose} />
         </div>
-      </nav>
-    </div>
-    <LoginModal show={show} onHide={handleClose}/>
-    </div>
-  );
+    );
 };
 
 export default Navbar;

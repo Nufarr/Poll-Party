@@ -1,15 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './components/Footer/Footer';
 import Navbar from './components/Navbar/Navbar';
 import LandingPage from './Pages/LandingPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div>
+    <div className='bg'>
       <Navbar/>
       <LandingPage/>
+      <Footer/>
     </div>
+    
   );
 }
 
