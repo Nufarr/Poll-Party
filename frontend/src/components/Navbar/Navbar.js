@@ -3,6 +3,9 @@ import './Navbar.css';
 import { ReactComponent as Logo } from '../../assets/images/logo.svg';
 import LoginModal from '../Modal/LoginModal';
 import RegisterModal from '../Modal/RegisterModal';
+import { useNavigate } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { logout, reset } from '../../features/auth/authSlice'
 
 const Navbar = () => {
     const [showLoginModal, setShowLoginModal] = useState(false);
@@ -15,18 +18,37 @@ const Navbar = () => {
     const handleRegModalClose = () => setShowRegModal(false);
     const handleRegModalShow = () => setShowRegModal(true);
 
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const { user } = useSelector((state) => state.auth)
+  
+    const onLogout = () => {
+      dispatch(logout())
+      dispatch(reset())
+      navigate('/')
+    }
+
     return (
+        
         <div>
             <div className="navBarContainer">
                 <nav className="navBar">
                     <a href="/">
                         <Logo />
                     </a>
-                    <div className="navItems">
-                        <a href="/#login" onClick={handleLoginModalShow}>
-                            Login
+                    <div >
+                    {user ? (
+                        <a href="/#logout" onClick={onLogout}>
+                            Logout
                         </a>
-                        <a href="/#register" onClick={handleRegModalShow}>Register</a>
+                         ) : (
+                            <div className="navItems">
+                            <a href="/#login" onClick={handleLoginModalShow}>
+                                Login
+                            </a>
+                            <a href="/#register" onClick={handleRegModalShow}>Register</a>
+                            </div>
+                        )}
                     </div>
                 </nav>
             </div>
