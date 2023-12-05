@@ -16,33 +16,31 @@
     line-height: 48px;
     letter-spacing: 0em;
     text-align: left;
-    margin-bottom: 14% !important;
+    margin-bottom: 5% !important;
     margin-top: 5% !important;
 }
 
-.formGroup {
-    background-color: #04395E !important;
-    border-color: white !important;
-    border-width: 3px !important;
-    border-radius: 9px !important;
-}
-
-.form {
-    margin: 8% 10%;
-    color: white !important;
-    
-}
-
-.form-control {
-    padding: 4% !important;
-    background-color: #04395E !important;
-    border-color: white !important;
-    border-width: 3px !important;
-    border-radius: 9px !important;
+.pollcontrol{
+    padding: 2% !important;
+    background-color: #FFFFFF7D !important;
+    border-top: 9px solid #FF1F66 !important;
     color: white !important; 
+    margin-bottom: 2%;
 }
 
-.form-control::placeholder {
+.formpoll {
+    margin: 3% 5%;
+    color: white !important;
+    font-size: 26px;
+}
+
+.formpoll input[type="radio"] {
+    width: 21px;
+    height: 21px; 
+    margin-right: 2%;
+  }
+
+.pollcontrol::placeholder {
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
@@ -69,24 +67,13 @@
     display: flex;
     justify-content: center;
 }
-.loginbutton {
-    margin: 15% 0 5% 0;
-    background-color: white !important;
-    color:#04395E !important;
-    font-size: 24px !important;
-    font-weight: 650 !important;
-    line-height: 29px !important;
-    padding: 2.5% 10% !important;
-    border-radius: 5px !important;
-}
-
-.createbutton {
-    margin: 5% 0 5% 0;
+.createPollbutton {
+    margin: 1% 0 5% 0;
     background-color: white !important;
     color:#04395E !important;
     font-size: 24px !important;
     font-weight: 600 !important;
     line-height: 29px !important;
-    padding: 2.5% 10% !important;
+    padding: 1.5% 7% !important;
     border-radius: 5px !important;
 }
