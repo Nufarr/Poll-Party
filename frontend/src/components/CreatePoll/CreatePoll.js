@@ -9,6 +9,8 @@ import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { login, reset } from '../../features/auth/authSlice'
 
+import { createPoll } from '../../features/polls/pollSlice'
+
 function CreatePoll({ show, onHide }) {
     const [question, setQ] = useState('');
     const [option1, setoption1] = useState('');
@@ -19,6 +21,17 @@ function CreatePoll({ show, onHide }) {
       onHide(); // Call the onHide function to close the modal
     };
 
+    const dispatch = useDispatch()
+  
+    const onSubmit = (e) => {
+      e.preventDefault()
+  
+      dispatch(createPoll({ question, option1, option2, option3 }))
+      setQ('');
+      setoption1('');
+      setoption2('');
+      setoption3('');
+    }
 
     return (
 
@@ -26,7 +39,7 @@ function CreatePoll({ show, onHide }) {
             <Modal.Body className='body' centered>
                   <div className='modalbutton'><CloseBut className="closebut" onClick={handleClose}/></div>
                 <Modal.Title className='title text-center' id="contained-modal-title-vcenter">Create a Poll</Modal.Title>
-                <Form>
+                <Form onSubmit={onSubmit}>
                 <Form.Group className="formpoll">
                         <Form.Label>Title</Form.Label>
                         <Form.Control
@@ -36,6 +49,7 @@ function CreatePoll({ show, onHide }) {
                             className='pollcontrol'
                             placeholder="Type your question here"
                             value={question}
+                            onChange={(e) => setQ(e.target.value)}
                             autoFocus
                         />
                     </Form.Group>
@@ -59,6 +73,7 @@ function CreatePoll({ show, onHide }) {
                             className='pollcontrol'
                             placeholder="Option1"
                             value={option1}
+                            onChange={(e) => setoption1(e.target.value)}
                             autoFocus
                         />
                         <Form.Control
@@ -68,6 +83,7 @@ function CreatePoll({ show, onHide }) {
                             className='pollcontrol'
                             placeholder="Option2"
                             value={option2}
+                            onChange={(e) => setoption2(e.target.value)}
                             autoFocus
                         />
                         <Form.Control
@@ -77,6 +93,7 @@ function CreatePoll({ show, onHide }) {
                             className='pollcontrol'
                             placeholder="Option3"
                             value={option3}
+                            onChange={(e) => setoption3(e.target.value)}
                             autoFocus
                         />
                     </Form.Group>
