@@ -25,6 +25,13 @@
     right: 0;
 }
 
+.polls{
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
 
 @media (max-width: 1000px) {
     .nush{

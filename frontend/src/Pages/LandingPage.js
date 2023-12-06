@@ -2,6 +2,7 @@ import React from 'react';
 import {ReactComponent as Testoasa} from "../assets/images/TestoasaCalculatorista.svg";
 import "./LandingPage.css";
 import Poll from '../components/Poll/Poll';
+import { Button } from 'bootstrap';
 
 export default function LandingPage() {
     return(
@@ -13,7 +14,13 @@ export default function LandingPage() {
                 direct de la audiența lor și să înțeleagă mai bine nevoile și dorințele acesteia.</p>
             </div>
             </div>
+            <div className='polls'>
             <Poll/>
+            <Poll/>
+            <Poll/>
+            <Poll/>
+            </div>
+            
         </div>
     );
 }

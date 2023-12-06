@@ -1,10 +1,11 @@
 .pollsquare{
-    width: 20vw;
+    width: 550px;
     background-color: white;
     border-radius: 26px;
     box-shadow: 4px 4px 6px 0px #021B2C;
     margin-left: 8%;
-    padding: 3%;
+    padding: 5%;
+    height: 500px;
 }
 
 .pollLabel{
@@ -42,3 +43,93 @@
     height: 21px; 
     margin-right: 2%;
   }
+
+  .votebut1{
+    margin: 20% 0 2% 45%;
+    background-color: #04395E !important;
+    color:white !important;
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    padding: 1% 7% !important;
+    border-radius: 5px !important;
+}
+
+.votebut2{
+    margin: 20% 0 2% 72%;
+    background-color: #04395E !important;
+    color:white !important;
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    line-height: 29px !important;
+    padding: 1% 7% !important;
+    border-radius: 5px !important;
+}
+.deletebut{
+    margin: 20% 0 2% 0;
+    background-color: #04395E !important;
+    color:white !important;
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    line-height: 29px !important;
+    padding: 1% 7% !important;
+    border-radius: 5px !important;
+}
+
+@media (max-width: 1000px) {
+    .pollsquare{
+        width:300px;
+        height: 400px;
+    }
+    .question{
+        font-size: 20px;
+    }
+    .pollLabel{
+        font-size: 18px;
+    }
+    .pollsquare input[type="radio"] {
+        width: 16px;
+        height: 16px; 
+        font-weight: 10 !important;
+        line-height: 5px !important;
+        padding: 1% 3% !important;
+      }
+      .votebut1{
+        font-size: 16px;
+        margin: 20% 0 2% 20%;
+    }
+    .votebut2{
+        font-size: 16px;
+        margin: 20% 0 2% 60%;
+    }
+    .deletebut{
+        font-size: 18px
+    }
+}
+  
+@media (max-width: 580px) {
+    .pollsquare{
+        width:200px;
+        height: 370px;
+    }
+    .question{
+        font-size: 16px;
+    }
+    .pollLabel{
+        font-size: 14px;
+    }
+    .pollsquare input[type="radio"] {
+        width: 14px;
+        height: 14px; 
+      }
+    .votebut1{
+        font-size: 12px;
+        margin: 20% 0 2% 5%;
+    }
+    .votebut2{
+        font-size: 12px;
+        margin: 20% 0 2% 5%;
+    }
+    .deletebut{
+        font-size: 18px
+    }
+}
