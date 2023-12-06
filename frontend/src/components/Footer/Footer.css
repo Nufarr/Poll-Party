@@ -11,3 +11,15 @@
     display: flex;
     gap: 10rem;
 }
+
+@media (max-width: 580px) {
+    .footerContainer{
+        gap: 10px;
+    }
+
+    .social{
+        width: 30px !important;
+        height: 30px !important;
+        gap: 2rem;
+    }
+}
