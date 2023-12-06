@@ -35,7 +35,6 @@ function CreatePoll({ show, onHide }) {
                             id='question'
                             className='pollcontrol'
                             placeholder="Type your question here"
-                            value={question}
                             autoFocus
                         />
                     </Form.Group>
@@ -58,7 +57,6 @@ function CreatePoll({ show, onHide }) {
                             id='option1'
                             className='pollcontrol'
                             placeholder="Option1"
-                            value={option1}
                             autoFocus
                         />
                         <Form.Control
@@ -67,7 +65,6 @@ function CreatePoll({ show, onHide }) {
                             id='option2'
                             className='pollcontrol'
                             placeholder="Option2"
-                            value={option2}
                             autoFocus
                         />
                         <Form.Control
@@ -76,7 +73,6 @@ function CreatePoll({ show, onHide }) {
                             id='option3'
                             className='pollcontrol'
                             placeholder="Option3"
-                            value={option3}
                             autoFocus
                         />
                     </Form.Group>
